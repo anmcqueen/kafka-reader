@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: kafka-reader
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: weather-consumer-group-v1
+      auto-offset-reset: earliest
+    properties:
+      spring.json.trusted.packages: ru.mcqueen.kafka.kafka_reader.model
+      spring.json.value.default.type: ru.mcqueen.kafka.kafka_reader.model.Weather
+      spring.json.use.type.headers: false
+app:
+  kafka:
+    topic:
+      name: weather-data-topic
