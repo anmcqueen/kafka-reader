@@ -1,7 +1,7 @@
 {
   "region": "Moscow",
-  "temperature": "+5C",
-  "wind": "15m/s",
+  "temperature": "+15C",
+  "wind": "5 m/s NW",
   "rainfall": "8mm",
   "humidity": "60%"
 }

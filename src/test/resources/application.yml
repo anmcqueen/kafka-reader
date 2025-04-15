@@ -15,7 +15,7 @@ spring:
     bootstrap-servers: ${spring.embedded.kafka.brokers}
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.StringDeserializer
     consumer:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
